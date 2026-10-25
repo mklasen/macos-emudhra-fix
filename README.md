@@ -66,6 +66,8 @@ sudo cp -p /etc/ssl/cert.pem.orig /etc/ssl/cert.pem
 
 **Re-run step 1 after a macOS update** — an update can replace `cert.pem` with Apple's current version and put the roots back. If it does, `sudo rm /etc/ssl/cert.pem.orig` and repeat from step 2.
 
+For machines you won't be watching, [`watcher/`](watcher/) has an optional LaunchAgent that checks daily and notifies you. Read-only, no `sudo`, and it only looks for the unambiguous root — see its README for why.
+
 <details>
 <summary><b>What actually happened</b></summary>
 
