@@ -54,7 +54,7 @@ openssl crl2pkcs7 -nocrl -certfile /etc/ssl/cert.pem | openssl pkcs7 -print_cert
 
 **Nothing printed** = done. If it errors instead, the file is damaged — restore the backup (step 6) and start over.
 
-## 6. Undo
+### Undo - incase something went wrong
 
 ```bash
 sudo cp -p /etc/ssl/cert.pem.orig /etc/ssl/cert.pem
